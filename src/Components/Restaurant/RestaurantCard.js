@@ -25,7 +25,7 @@ const RestaurantCard = ({ item }) => {
       </div>
       <div className="address">
         <p>
-        ☥
+        📍
           {item.address}, {item["address line 2"]}
         </p>
       </div>
