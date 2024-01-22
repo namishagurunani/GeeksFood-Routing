@@ -29,12 +29,11 @@ const RecipePage = () => {
       ) : (
         recipes.map((recipe) => (
           <div className="recipeContainer" key={recipe.idMeal}>
-            <img
+            <img className='recipeImage'
               src={recipe.strMealThumb}
               alt={recipe.strMeal}
-              style={styles.recipeImage}
             />
-            <h2 style={styles.recipeName}>{recipe.strMeal}</h2>
+            <h2 className="recipeName">{recipe.strMeal}</h2>
             <p>{recipe.strCategory}</p>
             <Link to={`/recipe-details/${recipe.idMeal}`} className="detailsLink">
               View Details
@@ -44,19 +43,6 @@ const RecipePage = () => {
       )}
     </div>
   );
-};
-
-const styles = {
-  recipeImage: {
-    maxWidth: '100%',
-    height: 'auto',
-    borderRadius: '8px',
-    margin: '10px 0',
-  },
-  recipeName: {
-    fontSize: '18px',
-    color: '#333',
-  },
 };
 
 export default RecipePage;

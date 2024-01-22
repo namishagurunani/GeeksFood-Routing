@@ -12,3 +12,27 @@
       margin: 10px 0;
       text-align: center;
 }
+.recipeImage{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+.recipeName{
+    font-size: 18px;
+    color: #333;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: "center";
+  }
+  .recipeContainers{
+    max-width: 800px;
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+  }

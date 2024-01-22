@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import './RecipePage.css';
 
 const RecipeDetailsPage = () => {
   const { id } = useParams();
@@ -24,12 +25,12 @@ const RecipeDetailsPage = () => {
   }, [id]);
 
   return (
-    <div style={styles.container}>
+    <div className='container'>
       {loading ? (
         <p>Loading...</p>
       ) : (
         selectedRecipe && (
-          <div style={styles.recipeContainer}>
+          <div className='recipeContainers'>
             <div style={styles.imageContainer}>
               <img
                 src={selectedRecipe.strMealThumb}
@@ -67,21 +68,6 @@ const RecipeDetailsPage = () => {
   );
 };
 const styles = {
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
- 
-  },
-  recipeContainer: {
-    maxWidth: '800px',
-    display: 'flex',
-    margin: '20px',
-    padding: '20px',
-    border: '1px solid #ccc',
-    borderRadius: '8px',
-    backgroundColor: '#fff',
-  },
   imageContainer: {
     flex: '1',
     marginRight: '20px',
