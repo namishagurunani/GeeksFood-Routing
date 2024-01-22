@@ -6,7 +6,8 @@ import Home from './Home/Home';
 import Quotes from './Quotes/Quotes'
 import Restaurant from './Restaurant/Restaurant'
 import Contact from './Contact/Contact';
-
+import RecipePage from './RecipePage/RecipePage';
+import RecipeDetailsPage from './RecipePage/RecipeDetailsPage'
 import FoodProvider from '../Context/FoodContext';
 
 
@@ -31,8 +32,12 @@ const App = () => {
         },
         {
           path: '/foods',
-          element: <h2>Foods</h2>
+          element: <RecipePage/>
         },
+        {path: '/recipe-details/:id',
+         element:<RecipeDetailsPage />
+      },
+       
        
         {
           path: '/contact',
